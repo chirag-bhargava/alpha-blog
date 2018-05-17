@@ -1,29 +1,29 @@
 <!Doctype html>
 <html>
-<head>
-	<title>New Article</title>
-</head>
-<body>
-	<header style="background-color: black; text-align: center;	color: white; font-size:60px">
-		<p style="margin-top: 0">New Article</p>
-	</header>
-	<hr>
-	<!--<%= form_tag do %>
-		<div>Title:</div></body><br/>
-		<%= text_field_tag(:title) %><br/><br/>
-		<div>Description:</dif><br/>
-		<%= text_area_tag(:description, "", size: "24X6") %>
-	<% end %>-->
-	<%= form_for @article do |f| %>
-		<%= f.label :title %>
-		<%= f.text_field :title %><br/> 
-		<%= f.label :description %>
-		<%= f.text_area :description %><br/><br/>
-		<%= f.submit "Submit Article" %>
-	<% end %>
-	<footer style="background-color: black; text-align: center; color: white;">
-		<p>Lorem Ipsum</p>
-		<p><%= link_to 'Home Page', root_path %></p>
-	</footer>
-</body>
+  <head>
+    <title>New Article</title>
+  </head>
+  <body>
+    <header style="background-color: black; text-align: center; color: white; font-size:60px">
+      <p style="margin-top: 0">New Article</p>
+    </header>
+    <% if @article.errors.any? %>
+      <ul style="color: red">
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <%= form_for @article do |f| %>
+      <%= f.label :title %><br/>
+      <%= f.text_field :title %><br/><br/> 
+      <%= f.label :description %><br/>
+      <%= f.text_area :description %><br/><br/>
+      <%= f.submit "Submit Article" %>
+    <% end %>
+    <footer style="background-color: black; text-align: center; color: white;">
+      <p>Lorem Ipsum</p>
+      <p><%= link_to 'Home Page', root_path %></p>
+    </footer>
+  </body>
 </html>

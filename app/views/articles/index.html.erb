@@ -1,1 +1,59 @@
-<h1> Your article is saved in our database </h1>
+<!Doctype html>
+<html>
+  <head>
+   <title>Articles Index Page</title>
+  </head>
+  <body>
+    <header style="background-color: black; color: white;">
+      <table style="margin-top: 0">
+        <tr>
+          <td style="font-size: 60px; text-align: left;" width="90%">
+            Chirag's Alpha Blog
+          </td>
+          <td style="font-size: 15px; text-align: right; padding-right: 30px">
+            <%= link_to 'About', about_path, {style: 'color:white'} %>
+          </td>
+          <td style="font-size: 15px; text-align: right; padding-right: 30px">
+            <%= link_to 'Article', articles_path, {style: 'color:white'} %>
+          </td> 
+          <td style="font-size: 15px; text-align: right; padding-right: 30px">
+            <%= link_to 'Home', root_path, {style: 'color:white'} %>
+          </td>
+        </tr>
+      </table>
+    </header>
+    <h1>
+      Articles
+    </h1>
+    <div style="text-align: right">
+      <%= link_to 'New Article', new_article_path %>
+    </div>
+    <table border="true">
+      <tr>
+        <th>
+          Title
+        </th>
+        <th width="60%">
+          Description
+        </th>
+        <th>
+          Actions
+        </th>
+      </tr>
+      <% @all_articles.each do |article| %>
+        <tr>
+          <td>
+            <%= article.title %>
+          </td>
+          <td>
+            <%= article.description %>
+          </td>
+          <td>
+            <%= link_to 'Show', article_path(article.id) %>
+            <%= link_to 'Edit', edit_article_path(article.id) %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>

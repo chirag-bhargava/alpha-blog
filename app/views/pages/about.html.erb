@@ -1,23 +1,38 @@
 <!Doctype html>
 <html>
-<head>
-	<title>About</title>
-</head>
-<body>
-	<header style="background-color: black; text-align: center;	color: white; font-size:60px">
-		<p style="margin-top: 0">About</p>
-	</header>
-	<img src="header.jpg" alt="Home Page Image" width="1904">
-	<hr>
-	<p style="text-align: justify; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut mauris et libero venenatis semper. Etiam eleifend tempus metus, id tristique ipsum maximus sed.ulla et risus mattis, condimentum massa lobortis, gravida libero. Pellentesque eget tellus purus. Mauris iaculis turpis eros, bibendum hendrerit velit aliquet eu. Ut malesuada, ex et ultrices dignissim, augue neque semper sapien, sed dictum urna metus quis eros. Sed bibendum massa nec arcu dictum eleifend sed sit amet orci. Nam vel libero ligula. Pellentesque pretium accumsan sem, sit amet interdum erat laoreet maximus. Nam id interdum erat.
-	</p>
-	<p style="text-align: justify; ">Etiam id efficitur elit. Aliquam non risus a quam mattis dictum. Etiam rutrum erat id laoreet accumsan. Proin quam urna, efficitur sit amet eleifend ut, aliquam a ex. Proin id imperdiet eros, vitae ornare neque. Fusce non mi iaculis, pellentesque turpis a, rutrum est. Sed hendrerit purus eget arcu posuere bibendum. Maecenas rutrum sem efficitur lacus iaculis, quis malesuada diam porta. Mauris vehicula non massa id luctus. Praesent sit amet dolor ac quam laoreet egestas. Morbi fringilla, justo at eleifend tristique, leo augue fringilla ipsum, vitae fermentum velit libero vitae est. Praesent luctus rutrum mi a cursus. Aliquam cursus dolor gravida, rhoncus lectus vitae, sodales nulla. Donec mollis elit quis ultrices sagittis. Quisque venenatis dignissim diam fermentum fringilla.
-	</p>
-	<p style="text-align: justify; ">Praesent leo felis, finibus quis turpis nec, porttitor egestas felis. Integer vehicula sapien eu sem ornare tempor vitae id felis. Nam porta sapien eget felis efficitur venenatis. Pellentesque pulvinar consequat nisi laoreet sodales. Curabitur feugiat feugiat est, eget varius risus rhoncus eget. Suspendisse elit metus, efficitur eu tempor a, auctor vel libero. Donec consequat eget sem eget ornare. Cras turpis ligula, pulvinar et felis nec, bibendum hendrerit leo. Vestibulum vel tellus vulputate diam rhoncus mattis. Integer auctor, justo vitae aliquam laoreet, mauris turpis porta libero, nec blandit sem tellus sit amet metus. Proin aliquam purus augue, vel posuere lacus malesuada vel. Duis varius velit eu egestas vestibulum. Quisque laoreet ante urna, vitae sollicitudin eros gravida ac. Vestibulum luctus nibh non efficitur venenatis. Nunc nec nulla dignissim, faucibus est vitae, tristique lacus. 
-	</p>
-	<footer style="background-color: black; text-align: center; color: white;">
-		<p>Lorem Ipsum</p>
-		<p><%= link_to 'Home Page', root_path %></p>
-	</footer>
-</body>
+	<head>
+		<title>About</title>
+	</head>
+	<body>
+		<header style="background-color: black;	color: white;" >
+      <table style="margin-top: 0">
+        <tr>
+          <td style="font-size: 60px; text-align: left;" width="90%">
+            Chirag's Alpha Blog
+          </td>
+          <td style="font-size: 15px; text-align: right; padding-right: 30px">
+            <%= link_to 'About', about_path, {style: 'color:white; text-decoration:none'} %>
+          </td >
+          <td style="font-size: 15px; text-align: right; padding-right: 30px">
+            <%= link_to 'Article', articles_path, {style: 'color:white'} %>
+          </td> 
+          <td style="font-size: 15px; text-align: right; padding-right: 30px">
+            <%= link_to 'Home', root_path, {style: 'color:white'} %>
+          </td>
+        </tr>
+      </table>
+    </header>
+		<img src="header.jpg" alt="Home Page Image" width="1904">
+		<hr>
+		<h1>
+      About
+    </h1>
+		<p style="text-align: justify; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut mauris et libero venenatis semper. Etiam eleifend tempus metus, id tristique ipsum maximus sed.ulla et risus mattis, condimentum massa lobortis, gravida libero. Pellentesque eget tellus purus. Mauris iaculis turpis eros, bibendum hendrerit velit aliquet eu. Ut malesuada, ex et ultrices dignissim, augue neque semper sapien, sed dictum urna metus quis eros. Sed bibendum massa nec arcu dictum eleifend sed sit amet orci. Nam vel libero ligula. Pellentesque pretium accumsan sem, sit amet interdum erat laoreet maximus. Nam id interdum erat.
+		</p>
+		<p style="text-align: justify; ">Etiam id efficitur elit. Aliquam non risus a quam mattis dictum. Etiam rutrum erat id laoreet accumsan. Proin quam urna, efficitur sit amet eleifend ut, aliquam a ex. Proin id imperdiet eros, vitae ornare neque. Fusce non mi iaculis, pellentesque turpis a, rutrum est. Sed hendrerit purus eget arcu posuere bibendum. Maecenas rutrum sem efficitur lacus iaculis, quis malesuada diam porta. Mauris vehicula non massa id luctus. Praesent sit amet dolor ac quam laoreet egestas. Morbi fringilla, justo at eleifend tristique, leo augue fringilla ipsum, vitae fermentum velit libero vitae est. Praesent luctus rutrum mi a cursus. Aliquam cursus dolor gravida, rhoncus lectus vitae, sodales nulla. Donec mollis elit quis ultrices sagittis. Quisque venenatis dignissim diam fermentum fringilla.
+		</p>
+		<p style="text-align: justify; ">Praesent leo felis, finibus quis turpis nec, porttitor egestas felis. Integer vehicula sapien eu sem ornare tempor vitae id felis. Nam porta sapien eget felis efficitur venenatis. Pellentesque pulvinar consequat nisi laoreet sodales. Curabitur feugiat feugiat est, eget varius risus rhoncus eget. Suspendisse elit metus, efficitur eu tempor a, auctor vel libero. Donec consequat eget sem eget ornare. Cras turpis ligula, pulvinar et felis nec, bibendum hendrerit leo. Vestibulum vel tellus vulputate diam rhoncus mattis. Integer auctor, justo vitae aliquam laoreet, mauris turpis porta libero, nec blandit sem tellus sit amet metus. Proin aliquam purus augue, vel posuere lacus malesuada vel. Duis varius velit eu egestas vestibulum. Quisque laoreet ante urna, vitae sollicitudin eros gravida ac. Vestibulum luctus nibh non efficitur venenatis. Nunc nec nulla dignissim, faucibus est vitae, tristique lacus. 
+		</p>
+		<footer style="background-color: black; padding: 30px"></footer>
+	</body>
 </html>
