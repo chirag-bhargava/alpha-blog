@@ -1,0 +1,11 @@
+<% flash.each do |name, msg| %>
+  <ul>
+    <li>
+      <% if name == 'notice' %>
+        <div style = "color: green"><%= msg %></div>
+      <% elsif name == 'error' %>
+        <div style = "color: red"><%= msg %></div>
+      <% end %>
+    </li>
+  </ul>
+<% end %>

@@ -4,9 +4,6 @@
     <title>New Article</title>
   </head>
   <body>
-    <header style="background-color: black; text-align: center; color: white; font-size:60px">
-      <p style="margin-top: 0">New Article</p>
-    </header>
     <% if @article.errors.any? %>
       <ul style="color: red">
         <% @article.errors.full_messages.each do |msg| %>
