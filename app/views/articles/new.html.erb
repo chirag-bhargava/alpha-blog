@@ -5,7 +5,7 @@
   </head>
   <body>
     <% if @article.errors.any? %>
-      <ul style="color: red">
+      <ul style="color: red; background-color: #ffcccc; border-left: 6px solid red">
         <% @article.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
