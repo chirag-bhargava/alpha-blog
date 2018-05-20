@@ -4,23 +4,7 @@
     <title>New Article</title>
   </head>
   <body>
-    <% if @article.errors.any? %>
-      <ul style="color: red; background-color: #ffcccc; border-left: 6px solid red">
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    <% end %>
-    <%= form_for @article do |f| %>
-      <%= f.label :title %><br/>
-      <%= f.text_field :title %><br/><br/> 
-      <%= f.label :description %><br/>
-      <%= f.text_area :description %><br/><br/>
-      <%= f.submit "Submit Article" %>
-    <% end %>
-    <footer style="background-color: black; text-align: center; color: white;">
-      <p>Lorem Ipsum</p>
-      <p><%= link_to 'Home Page', root_path %></p>
-    </footer>
+    <h1 class="container article-form-title">New Article</h1>
+    <%= render 'article_form' %>
   </body>
 </html>

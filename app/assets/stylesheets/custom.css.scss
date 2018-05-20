@@ -1,2 +1,77 @@
+$navbar-default-bg: black;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-brand {
+  font-size: 40px;
+  font-weight: bold;
+  test-tranform: uppercase;
+  color: white;
+}
+
+.navbar-default {
+  text-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  color: #ffffff;
+}
+
+.jumbotron {
+  background-image: asset-url('header.jpg');
+  padding-left: 20px;
+}
+
+.thumbnail {
+  margin-left: 90px;
+  width: 520px;
+}
+
+.col-md-4 {
+  padding: 0px;
+  width: 610px;
+}
+
+.thumbnail-img{
+  background-image: asset-url('pinocchio.png');
+  width: 510px;
+  height: 510px;
+}
+
+.btn {
+  background-color: black;
+  border-color: black;
+  border-radius: 0px;
+}
+
+.caption {
+  text-align: justify;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+}
+
+.footer-nav {
+  text-align: right;
+  float: right;
+  width: 40%;
+  padding-right: 10px;
+}
+
+.made-by {
+  width: 50%;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.article-form-title {
+  text-transform: capitalize;
+  font-weight: bold;
+  padding-left: 193px
+}

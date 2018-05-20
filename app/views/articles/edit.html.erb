@@ -4,20 +4,7 @@
     <title>Edit Article</title>
   </head>
   <body>
-    <% if @article.errors.any? %>
-      <ul style="color: red">
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    <% end %>
-    <%= form_for @article do |f| %>
-      <%= f.label :title %><br/>
-      <%= f.text_field :title %><br/><br/> 
-      <%= f.label :description %><br/>
-      <%= f.text_area :description %><br/><br/>
-      <%= f.submit "Update Article" %>
-    <% end %>
-    <footer style="background-color: black; padding: 30px"></footer>
+    <h1 class="container article-form-title">New Article</h1>
+    <%= render 'article_form' %>
   </body>
 </html>
